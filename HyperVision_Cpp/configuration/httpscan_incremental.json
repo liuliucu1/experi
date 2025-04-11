@@ -1,0 +1,46 @@
+{
+    "dataset_construct": {
+        "data_path": "/data16/yurun/burst/data/data/httpscan.data",
+        "label_path": "/data16/yurun/burst/data/data/httpscan.label"
+    },
+    "flow_construct": {
+        "flow_timeout": 120,
+        "activity_timeout": 30
+    },
+    "edge_construct": {
+        "construct_long_edge": true,
+        "construct_short_edge": true
+    },
+    "graph_analyze": {
+        "proto_cluster": true,
+        "val_K": 10,
+        "al": 0.1,
+        "bl": 1.0,
+        "cl": 0.5,
+        "as": 0.1,
+        "bs": 1.0,
+        "cs": 0.5,
+        "uc": 0.01,
+        "us": 0.001,
+        "ul": 0.05,
+        "vc": 10,
+        "vs": 20,
+        "vl": 10,
+        "select_ratio": 0.01
+    },
+    "result_save": {
+        "save_result_enable": true,
+        "save_result_path": "../results/httpscan_incremental/results.json"
+    },
+    "sliding_window": {
+        "window_size": 1000000
+    },
+    "incremental_learning": {
+        "enabled": true,
+        "model_save_path": "../models/httpscan_incremental",
+        "load_previous_model": true,
+        "model_load_path": "../models/http_lrscan/model_window_0.bin",
+        "learning_rate": 0.01,
+        "model_decay_factor": 0.9
+    }
+}

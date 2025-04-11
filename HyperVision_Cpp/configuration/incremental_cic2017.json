@@ -1,0 +1,54 @@
+{
+    "dataset_construct": {
+        "data_path": "",
+        "label_path": "",
+        "train_ratio": 0.5
+    },
+    "flow_construct": {
+        "flow_timeout": 120,
+        "activity_timeout": 30
+    },
+    "edge_construct": {
+        "construct_long_edge": true,
+        "construct_short_edge": true
+    },
+    "graph_analyze": {
+        "proto_cluster": true,
+        "val_K": 10,
+        "al": 0.1,
+        "bl": 1.0,
+        "cl": 0.5,
+        "as": 0.1,
+        "bs": 1.0,
+        "cs": 0.5,
+        "lsvm_c": 1.0,
+        "ssvm_c": 1.0,
+        "lsvm_gamma": 0.1,
+        "ssvm_gamma": 0.1
+    },
+    "result_save": {
+        "save_result_enable": true,
+        "save_result_path": "../results/multi_dataset_incremental"
+    },
+    "sliding_window": {
+        "window_size": 1000000
+    },
+    "incremental_learning": {
+        "enabled": true,
+        "model_save_path": "../models/multi_dataset_incremental",
+        "load_previous_model": false,
+        "learning_rate": 0.01,
+        "model_decay_factor": 0.9
+    },
+    "multi_dataset": {
+        "enabled": true,
+        "data_paths": [
+            "/home/sduu2/userspace-20T-1/yyr/data/http_lrscan.data",
+            "/home/sduu2/userspace-20T-1/yyr/evasion_results/delaying/charrdos.data"
+        ],
+        "label_paths": [
+            "/home/sduu2/userspace-20T-1/yyr/data/http_lrscan.label",
+            "/home/sduu2/userspace-20T-1/yyr/evasion_results/delaying/charrdos.label"
+        ]
+    }
+}

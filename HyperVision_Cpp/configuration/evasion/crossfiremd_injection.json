@@ -1,0 +1,40 @@
+{
+    "dataset_construct": {
+        "data_path": "/home/sduu2/userspace-20T-1/yyr/evasion_results/injection/crossfiremd.data",
+        "label_path": "/home/sduu2/userspace-20T-1/yyr/evasion_results/injection/crossfiremd.label",
+        "train_ratio": 0.0
+    },
+    "flow_construct": {
+        "flow_time_out": 10.0,
+        "evict_flow_time_out": 5.0
+    },
+    "edge_construct": {
+        "length_bin_size": 10,
+        "edge_long_line": 15,
+        "edge_agg_line": 20
+    },
+    "graph_analyze": {
+        "select_ratio": 0.01,
+        "offset_l": 5.0,
+        "offset_s": 0.0,
+        "al": 0.1,
+        "bl": 1.7,
+        "cl": 0.5,
+        "as": 0.1,
+        "bs": 1.7,
+        "cs": 0.5,
+        "uc": 0.004,
+        "vc": 40,
+        "us": 0.004,
+        "vs": 40,
+        "ul": 0.004,
+        "vl": 40
+    },
+    "result_save": {
+        "save_result_enable": true,
+        "save_result_path": "/home/sduu2/userspace-20T-1/yyr/HyperVision_results/injection/crossfiremd_injection/crossfiremd_injection.txt",
+        "save_final_result_path": "/home/sduu2/userspace-20T-1/yyr/HyperVision_results/features/crossfiremd_injection/crossfiremd_injection.txt",
+        "save_feature_path_s": "/home/sduu2/userspace-20T-1/yyr/HyperVision_results/features/crossfiremd_injection_s.txt",
+        "save_feature_path_l": "/home/sduu2/userspace-20T-1/yyr/HyperVision_results/features/crossfiremd_injection_l.txt"
+    }
+}
